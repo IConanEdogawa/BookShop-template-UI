@@ -1,0 +1,64 @@
+// navbar.component.scss
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .logo-container {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for logo zoom */
+  }
+  
+  .logo-container:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #343a40; /* Dark text color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for text color change */
+  }
+  
+  .nav-item a:hover {
+    color: #007bff; /* Text color on hover */
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 8px 15px;
+    border: 1px solid #ced4da; /* Gray border */
+    border-radius: 4px;
+    width: 200px;
+    transition: width 0.3s ease-in-out; /* Smooth transition for input width */
+  }
+  
+  .search-input:focus {
+    width: 300px; /* Expand input on focus */
+  }
+  
