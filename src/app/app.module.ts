@@ -9,6 +9,7 @@ import { FooterComponent } from './components/pages/footer/footer.component';
 import { CoruselComponent } from './components/pages/corusel/corusel.component';
 import { CardComponent } from './components/pages/card/card.component';
 import { PopularComponent } from './components/pages/popular/popular.component';
+import { PopularPageComponent } from './components/pages/popular-page/popular-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PopularComponent } from './components/pages/popular/popular.component';
     FooterComponent,
     CoruselComponent,
     CardComponent,
-    PopularComponent
+    PopularComponent,
+    PopularPageComponent
   ],
   imports: [
     BrowserModule,

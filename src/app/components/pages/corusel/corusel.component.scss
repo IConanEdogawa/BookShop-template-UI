@@ -102,8 +102,9 @@
   }
   
   .category:hover {
-    color: #4a148c; /* Фиолетовый текст при наведении */
-    background: white; /* Белый фон при наведении */
+    color: #a767f6; /* Фиолетовый текст при наведении */
+    cursor: pointer;
+    // background: white; /* Белый фон при наведении */
   }
 
   
