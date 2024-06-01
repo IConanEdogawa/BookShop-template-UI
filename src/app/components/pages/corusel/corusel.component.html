@@ -1,0 +1,19 @@
+<div class="carousel-container">
+    <div class="carousel-slide" *ngFor="let item of items; let i = index" [class.active]="i === currentIndex">
+      <div class="carousel-image-container">
+        <img [src]="item.image" alt="Carousel Image" class="carousel-image">
+      </div>
+      <div class="carousel-poster-title-container">
+          <div class="carousel-title">
+            <h2>{{ item.title }}</h2>
+          </div>
+        <div class="carousel-poster-container">
+          <img [src]="item.poster" alt="Book Poster" class="carousel-poster">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-categories">
+    <div class="category" *ngFor="let category of categories">{{ category }}</div>
+  </div>
+  

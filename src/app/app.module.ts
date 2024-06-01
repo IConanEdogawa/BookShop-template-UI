@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/pages/navbar/navbar.component';
 import { FooterComponent } from './components/pages/footer/footer.component';
+import { CoruselComponent } from './components/pages/corusel/corusel.component';
+import { CardComponent } from './components/pages/card/card.component';
+import { PopularComponent } from './components/pages/popular/popular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CoruselComponent,
+    CardComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,
