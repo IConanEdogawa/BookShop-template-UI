@@ -1,1 +1,13 @@
-<p>popular works!</p>
+<div class="popular-container">
+    <h2 class="popular-title">Сегодня самые популярные</h2>
+    <div class="popular-cards">
+      <app-card
+        *ngFor="let book of popularBooks"
+        [image]="book.image"
+        [title]="book.title"
+        [author]="book.author"
+      ></app-card>
+    </div>
+    <a href="#" class="view-all">Просмотреть все</a>
+  </div>
+  
