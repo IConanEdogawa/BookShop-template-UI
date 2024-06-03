@@ -1,1 +1,36 @@
-<h1>Salomlar !</h1>
+<div class="popular-books">
+  <h1 class="title">Popular Books</h1>
+  
+  <mat-tab-group>
+    <mat-tab label="In Month">
+      <div class="cards-container">
+        <app-card 
+          *ngFor="let book of booksMonth" 
+          [image]="book.image" 
+          [title]="book.title" 
+          [author]="book.author">
+        </app-card>
+      </div>
+    </mat-tab>
+    <mat-tab label="In Week">
+      <div class="cards-container">
+        <app-card 
+          *ngFor="let book of booksWeek" 
+          [image]="book.image" 
+          [title]="book.title" 
+          [author]="book.author">
+        </app-card>
+      </div>
+    </mat-tab>
+    <mat-tab label="In Day">
+      <div class="cards-container">
+        <app-card 
+          *ngFor="let book of booksDay" 
+          [image]="book.image" 
+          [title]="book.title" 
+          [author]="book.author">
+        </app-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

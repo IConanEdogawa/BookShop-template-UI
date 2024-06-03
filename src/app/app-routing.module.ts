@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: 'most-popular', component: PopularPageComponent },
+  { path: 'popular', component: PopularPageComponent },
   {path: 'home', component: HomeComponent},
   { path: '**', component: HomeComponent },
   {path: '', redirectTo: 'home', pathMatch: 'full'},
