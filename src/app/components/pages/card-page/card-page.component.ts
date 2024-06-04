@@ -53,13 +53,17 @@ user2 = {
       rate: '9.5',
       view: '10.6k',
       likes: '125k',
+      publisher: 'Penguin Random House', 
+      author: 'J.K. Rowling', 
+      artist: 'J.K. Rowling',
+      translator: 'J.K. Rowling',
       saved: '35k',
       description: 'This is the description of the book.',
       users: [this.user1, this.user2]
   };
 
-  selectedStatus = 'Started';
-  statuses = ['Select status', 'Started', 'Stopped', 'Liked'];
+  selectedStatus = 'Choose a status';
+  statuses = ['Choose a status', 'Started', 'Stopped', 'Liked'];
 
   // route ga ID berish va API ga ulash kerak.
 }

@@ -1,0 +1,7 @@
+
+<section class="container">
+    <p>Similar and related books</p>
+    <div class="cards-container">
+        <app-card class="card" *ngFor="let book of books" [image]="book.image" [title]="book.title" [author]="book.author"></app-card>
+    </div>
+</section>

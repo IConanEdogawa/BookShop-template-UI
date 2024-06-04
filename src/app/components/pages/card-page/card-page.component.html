@@ -17,17 +17,25 @@
             <span *ngFor="let tag of book.tags">{{ tag }}</span>
         </div>
         <div id="book-rating">
-            <span *ngIf="book?.rate"><i class="icon-rate"></i> {{ book.rate }}</span>
-            <span *ngIf="book?.view"><i class="icon-view"></i> {{ book.view }}</span>
-            <span *ngIf="book?.likes"><i class="icon-likes"></i> {{ book.likes }}</span>
-            <span *ngIf="book?.saved"><i class="icon-saved"></i> {{ book.saved }}</span>
+            <span *ngIf="book.rate"><i class="icon-rate"></i> {{ book.rate }}</span>
+            <span *ngIf="book.view"><i class="icon-view"></i> {{ book.view }}</span>
+            <span *ngIf="book.likes"><i class="icon-likes"></i> {{ book.likes }}</span>
+            <span *ngIf="book.saved"><i class="icon-saved"></i> {{ book.saved }}</span>
         </div>
         <p>{{ book.description }}</p>
         <div id="book-authors">
-            <p *ngIf="book?.publisher">Publisher: {{ book.publisher }}</p>
-            <p *ngIf="book?.author">Author: {{ book.author }}</p>
-            <p *ngIf="book?.artist">Artist: {{ book.artist }}</p>
-            <p *ngIf="book?.translator">Translator: {{ book.translator }}</p>
+            <div>
+                <p *ngIf="book.publisher">Publisher </p>
+                <p *ngIf="book.author">Author </p>
+                <p *ngIf="book.artist">Artist </p>
+                <p *ngIf="book.translator">Translator </p>
+            </div>
+            <div>
+                <span *ngIf="book.publisher">{{ book.publisher }}</span>
+                <span *ngIf="book.author">{{ book.author }}</span>
+                <span *ngIf="book.artist">{{ book.artist }}</span>
+                <span *ngIf="book.translator">{{ book.translator }}</span>
+            </div>
         </div>
         <div id="book-users">
             <p *ngFor="let user of book?.users">
@@ -36,3 +44,5 @@
         </div>
     </div>
 </section>
+
+<app-card-page-footer></app-card-page-footer>

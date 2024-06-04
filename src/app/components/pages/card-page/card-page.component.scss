@@ -28,7 +28,7 @@
     }
 
     button {
-        padding: 10px 50px;
+        padding: 10px 65px;
         font-size: 16px;
         color: #fff;
         background-color: #007bff;
@@ -44,7 +44,7 @@
     }
 
     select {
-        padding: 10px 30px;
+        padding: 10px 15px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -136,12 +136,29 @@
     }
 
     #book-authors {
+        div {
+            display: flex;
+            // width: 800px;
+        }
         p {
             font-size: 16px;
-            margin: 5px 0;
+            margin-top: 5px;
+            margin-right: 20%;
             color: #555;
         }
+        span {
+            // display: block;  
+            // width: fit-content; 
+            margin-bottom: 5px; 
+            margin-right: 10%;
+            padding: 5px 10px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+          }
     }
+
+      
 
     #book-users {
         display: flex;
