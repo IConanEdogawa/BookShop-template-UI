@@ -13,7 +13,6 @@ import {
   InjectionToken,
   Injector,
   Input,
-  InputFlags,
   IterableDiffers,
   KeyValueDiffers,
   LOCALE_ID,
@@ -30,6 +29,8 @@ import {
   TemplateRef,
   Version,
   ViewContainerRef,
+  __spreadProps,
+  __spreadValues,
   booleanAttribute,
   createNgModule,
   findLocaleData,
@@ -57,11 +58,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-6JLT4FPK.js";
-import {
-  __spreadProps,
-  __spreadValues
-} from "./chunk-J4B6MK7R.js";
+} from "./chunk-PAOQMVG5.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
@@ -2095,7 +2092,7 @@ _NgClass.ɵdir = ɵɵdefineDirective({
   type: _NgClass,
   selectors: [["", "ngClass", ""]],
   inputs: {
-    klass: [InputFlags.None, "class", "klass"],
+    klass: [0, "class", "klass"],
     ngClass: "ngClass"
   },
   standalone: true
@@ -2263,7 +2260,7 @@ var NgForOfContext = class {
 var _NgForOf = class _NgForOf {
   /**
    * The value of the iterable expression, which can be used as a
-   * [template input variable](guide/structural-directives#shorthand).
+   * [template input variable](guide/directives/structural-directives#shorthand).
    */
   set ngForOf(ngForOf) {
     this._ngForOf = ngForOf;
@@ -2306,7 +2303,7 @@ var _NgForOf = class _NgForOf {
   }
   /**
    * A reference to the template that is stamped out for each item in the iterable.
-   * @see [template reference variable](guide/template-reference-variables)
+   * @see [template reference variable](guide/templates/reference-variables)
    */
   set ngForTemplate(value) {
     if (value) {
@@ -3499,7 +3496,7 @@ var _PercentPipe = class _PercentPipe {
    * Default is `0`.
    * @param locale A locale code for the locale format rules to use.
    * When not supplied, uses the value of `LOCALE_ID`, which is `en-US` by default.
-   * See [Setting your app locale](guide/i18n-common-locale-id).
+   * See [Setting your app locale](guide/i18n/locale-id).
    */
   transform(value, digitsInfo, locale) {
     if (!isValue(value))
@@ -3574,7 +3571,7 @@ var _CurrencyPipe = class _CurrencyPipe {
    * For example, the Canadian dollar has 2 digits, whereas the Chilean peso has none.
    * @param locale A locale code for the locale format rules to use.
    * When not supplied, uses the value of `LOCALE_ID`, which is `en-US` by default.
-   * See [Setting your app locale](guide/i18n-common-locale-id).
+   * See [Setting your app locale](guide/i18n/locale-id).
    */
   transform(value, currencyCode = this._defaultCurrencyCode, display = "symbol", digitsInfo, locale) {
     if (!isValue(value))
@@ -3702,21 +3699,13 @@ var CommonModule = _CommonModule;
 })();
 var PLATFORM_BROWSER_ID = "browser";
 var PLATFORM_SERVER_ID = "server";
-var PLATFORM_WORKER_APP_ID = "browserWorkerApp";
-var PLATFORM_WORKER_UI_ID = "browserWorkerUi";
 function isPlatformBrowser(platformId) {
   return platformId === PLATFORM_BROWSER_ID;
 }
 function isPlatformServer(platformId) {
   return platformId === PLATFORM_SERVER_ID;
 }
-function isPlatformWorkerApp(platformId) {
-  return platformId === PLATFORM_WORKER_APP_ID;
-}
-function isPlatformWorkerUi(platformId) {
-  return platformId === PLATFORM_WORKER_UI_ID;
-}
-var VERSION = new Version("17.3.10");
+var VERSION = new Version("18.0.1");
 var _ViewportScroller = class _ViewportScroller {
 };
 _ViewportScroller.ɵprov = ɵɵdefineInjectable({
@@ -4564,17 +4553,17 @@ _NgOptimizedImage.ɵdir = ɵɵdefineDirective({
     }
   },
   inputs: {
-    ngSrc: [InputFlags.HasDecoratorInputTransform, "ngSrc", "ngSrc", unwrapSafeUrl],
+    ngSrc: [2, "ngSrc", "ngSrc", unwrapSafeUrl],
     ngSrcset: "ngSrcset",
     sizes: "sizes",
-    width: [InputFlags.HasDecoratorInputTransform, "width", "width", numberAttribute],
-    height: [InputFlags.HasDecoratorInputTransform, "height", "height", numberAttribute],
+    width: [2, "width", "width", numberAttribute],
+    height: [2, "height", "height", numberAttribute],
     loading: "loading",
-    priority: [InputFlags.HasDecoratorInputTransform, "priority", "priority", booleanAttribute],
+    priority: [2, "priority", "priority", booleanAttribute],
     loaderParams: "loaderParams",
-    disableOptimizedSrcset: [InputFlags.HasDecoratorInputTransform, "disableOptimizedSrcset", "disableOptimizedSrcset", booleanAttribute],
-    fill: [InputFlags.HasDecoratorInputTransform, "fill", "fill", booleanAttribute],
-    placeholder: [InputFlags.HasDecoratorInputTransform, "placeholder", "placeholder", booleanOrDataUrlAttribute],
+    disableOptimizedSrcset: [2, "disableOptimizedSrcset", "disableOptimizedSrcset", booleanAttribute],
+    fill: [2, "fill", "fill", booleanAttribute],
+    placeholder: [2, "placeholder", "placeholder", booleanOrDataUrlAttribute],
     placeholderConfig: "placeholderConfig",
     src: "src",
     srcset: "srcset"
@@ -5003,12 +4992,8 @@ export {
   CommonModule,
   PLATFORM_BROWSER_ID,
   PLATFORM_SERVER_ID,
-  PLATFORM_WORKER_APP_ID,
-  PLATFORM_WORKER_UI_ID,
   isPlatformBrowser,
   isPlatformServer,
-  isPlatformWorkerApp,
-  isPlatformWorkerUi,
   VERSION,
   ViewportScroller,
   NullViewportScroller,
@@ -5026,9 +5011,9 @@ export {
 
 @angular/common/fesm2022/common.mjs:
   (**
-   * @license Angular v17.3.10
+   * @license Angular v18.0.1
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-ML24ZVSQ.js.map
+//# sourceMappingURL=chunk-T76CEG6M.js.map

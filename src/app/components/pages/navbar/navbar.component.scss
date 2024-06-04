@@ -4,22 +4,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa; /* Light gray background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   
   .logo-container {
-    transition: transform 0.3s ease-in-out; /* Smooth transition for logo zoom */
+    transition: transform 0.3s ease-in-out; 
     display: flex;
   }
 
   .logo-container h1 {
-    margin-top: 15px;
-    color: #683fa1; /* Dark text color */
+    margin-top: -10px;
+    color: #683fa1;
+    font-size: 24px; 
   }
   
   .logo-container:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1); 
   }
   
   .logo {

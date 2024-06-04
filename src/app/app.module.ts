@@ -12,6 +12,8 @@ import { CoruselComponent } from './components/pages/corusel/corusel.component';
 import { CardComponent } from './components/pages/card/card.component';
 import { PopularComponent } from './components/pages/popular/popular.component';
 import { PopularPageComponent } from './components/pages/popular-page/popular-page.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { CardPageComponent } from './components/pages/card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { PopularPageComponent } from './components/pages/popular-page/popular-pa
     CoruselComponent,
     CardComponent,
     PopularComponent,
-    PopularPageComponent
+    PopularPageComponent,
+    CardPageComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { PopularPageComponent } from './components/pages/popular-page/popular-pa
     BrowserAnimationsModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
