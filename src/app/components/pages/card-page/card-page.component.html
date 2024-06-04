@@ -1,1 +1,38 @@
-<p>card-page works!</p>
+<app-navbar></app-navbar>
+
+<section class="container">
+    <div class="right-aside">
+        <img [src]="book.image" alt="Book Image">
+        <button>Read</button>
+        <select name="type" [(ngModel)]="selectedStatus">
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+        </select>
+    </div>
+
+    <div class="left-aside">
+        <h6>{{ book.country }} {{ book.year }} {{ book.status }}</h6>
+        <h1>{{ book.title }}</h1>
+        <h3>{{ book.originalTitle || '' }}</h3>
+        <div *ngIf="book?.tags?.length" id="book-tags">
+            <span *ngFor="let tag of book.tags">{{ tag }}</span>
+        </div>
+        <div id="book-rating">
+            <span *ngIf="book?.rate"><i class="icon-rate"></i> {{ book.rate }}</span>
+            <span *ngIf="book?.view"><i class="icon-view"></i> {{ book.view }}</span>
+            <span *ngIf="book?.likes"><i class="icon-likes"></i> {{ book.likes }}</span>
+            <span *ngIf="book?.saved"><i class="icon-saved"></i> {{ book.saved }}</span>
+        </div>
+        <p>{{ book.description }}</p>
+        <div id="book-authors">
+            <p *ngIf="book?.publisher">Publisher: {{ book.publisher }}</p>
+            <p *ngIf="book?.author">Author: {{ book.author }}</p>
+            <p *ngIf="book?.artist">Artist: {{ book.artist }}</p>
+            <p *ngIf="book?.translator">Translator: {{ book.translator }}</p>
+        </div>
+        <div id="book-users">
+            <p *ngFor="let user of book?.users">
+                <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
+            </p>
+        </div>
+    </div>
+</section>

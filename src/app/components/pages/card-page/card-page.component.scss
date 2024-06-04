@@ -1,0 +1,162 @@
+.container {
+    display: flex;
+    height: auto;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.right-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+
+    img {
+        height: 400px;
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 50px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    select {
+        padding: 10px 30px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+.left-aside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h6 {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    #book-tags {
+        margin-bottom: 15px;
+
+        span {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
+    }
+
+    #book-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        span {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 16px;
+            color: #333;
+
+            i {
+                margin-right: 5px;
+            }
+
+            .icon-rate {
+                content: url('../../../../assets/images/star.png');
+                width: 15px;
+                height: 15px;
+            }
+
+            .icon-view {
+                content: url('../../../../assets/images/view.png');
+                width: 15px;
+                height: 15px;
+            }
+
+            .icon-likes {
+                content: url('../../../../assets/images/heart.png');
+                width: 15px;
+                height: 15px;
+            }
+
+            .icon-saved {
+                content: url('../../../../assets/images/save-instagram.png');
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #book-authors {
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
+        }
+    }
+
+    #book-users {
+        display: flex;
+        p {
+            margin-right: 5px;
+
+            a {
+                font-size: 16px;
+                color: #ed8b22;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
