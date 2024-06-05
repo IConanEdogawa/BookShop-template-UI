@@ -2,13 +2,19 @@
 
 <div class="background"></div>
 <section class="container">
+  <div style="display: flex;">
     <img src="../../../../assets/images/avatar.jpg" alt="User Profile Image" class="profile-image">
     <div class="second-container">
         <h1 class="full-name">John Doe</h1>
         <p class="display-type">Premium User</p>
     </div>
     <span class="edit-profile"><img src="../../../../assets/images/pencil.png" alt=""></span>
+  </div>
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="Info"><app-info></app-info></mat-tab>
+    <mat-tab label="MarkBook"><app-markbook></app-markbook></mat-tab>
+    <mat-tab label="My comments"><app-comments></app-comments></mat-tab>
+  </mat-tab-group>
   </section>
-
 
 <app-footer></app-footer>

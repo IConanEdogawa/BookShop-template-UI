@@ -17,6 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CardPageComponent } from './components/pages/card-page/card-page.component';
 import { CardPageFooterComponent } from './components/pages/card-page-footer/card-page-footer.component';
 import { UserProfileComponent } from './components/User/user-profile/user-profile.component';
+import { InfoComponent } from './components/User/info/info.component';
+import { MarkbookComponent } from './components/User/markbook/markbook.component';
+import { CommentsComponent } from './components/User/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { UserProfileComponent } from './components/User/user-profile/user-profil
     PopularPageComponent,
     CardPageComponent,
     CardPageFooterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    InfoComponent,
+    MarkbookComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
