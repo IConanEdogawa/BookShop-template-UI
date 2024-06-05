@@ -16,6 +16,7 @@ import { PopularPageComponent } from './components/pages/popular-page/popular-pa
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CardPageComponent } from './components/pages/card-page/card-page.component';
 import { CardPageFooterComponent } from './components/pages/card-page-footer/card-page-footer.component';
+import { UserProfileComponent } from './components/User/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CardPageFooterComponent } from './components/pages/card-page-footer/car
     PopularComponent,
     PopularPageComponent,
     CardPageComponent,
-    CardPageFooterComponent
+    CardPageFooterComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
