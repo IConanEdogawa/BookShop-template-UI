@@ -31,6 +31,7 @@
     // margin-right: 20px;
     // margin-bottom: 10px;
   }
+  
 }
 
 .background {
@@ -56,24 +57,31 @@
 }
 
 .edit-profile {
-  img {
+    margin-left: 1120px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .edit-profile img {
     width: 20px;
     height: 20px;
-    position: relative;
-    bottom: 75px;
-    left: 20px;
-    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
   }
-  margin-top: 80px;
-  margin-left: 1100px;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  border-color: #f9f9f9;
-  transition: all 0.3s ease;
-  box-shadow: #00000059;
-  &:hover {
+  
+  .edit-profile:hover {
     transform: scale(1.1);
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-}
+  
+
+
+
+  
