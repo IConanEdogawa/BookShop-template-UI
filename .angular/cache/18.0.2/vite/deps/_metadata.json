@@ -1,0 +1,76 @@
+{
+  "hash": "9db8e3e7",
+  "configHash": "e96f36b5",
+  "lockfileHash": "49594488",
+  "browserHash": "c4ff8896",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "174198d5",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "6821c9af",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "2e936571",
+      "needsInterop": false
+    },
+    "@angular/material/tabs": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/tabs.mjs",
+      "file": "@angular_material_tabs.js",
+      "fileHash": "64e48184",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "bebbee81",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "bc14f56c",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "0a75657b",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "0b4521af",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "browser-GRU34CZF": {
+      "file": "browser-GRU34CZF.js"
+    },
+    "chunk-XSANA626": {
+      "file": "chunk-XSANA626.js"
+    },
+    "chunk-F7PYPLVU": {
+      "file": "chunk-F7PYPLVU.js"
+    },
+    "chunk-PHMZYZZQ": {
+      "file": "chunk-PHMZYZZQ.js"
+    },
+    "chunk-JYUHCXLG": {
+      "file": "chunk-JYUHCXLG.js"
+    },
+    "chunk-GM3LIEQY": {
+      "file": "chunk-GM3LIEQY.js"
+    }
+  }
+}

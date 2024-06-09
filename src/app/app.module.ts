@@ -21,6 +21,10 @@ import { UserProfileComponent } from './components/User/user-profile/user-profil
 import { InfoComponent } from './components/User/info/info.component';
 import { MarkbookComponent } from './components/User/markbook/markbook.component';
 import { CommentsComponent } from './components/User/comments/comments.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { SignupComponent } from './components/pages/signup/signup.component';
+import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { CommentsComponent } from './components/User/comments/comments.component
     UserProfileComponent,
     InfoComponent,
     MarkbookComponent,
-    CommentsComponent
+    CommentsComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
