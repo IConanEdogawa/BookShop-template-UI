@@ -14,9 +14,6 @@ export class SignupComponent {
   // constructor(private router: Router) {}
 
   onSignup() {
-    // Implement your signup logic here
     console.log('Signup:', this.fullname, this.email, this.password);
-    // Navigate to login page on successful signup
-    // this.router.navigate(['/login']);
   }
 }
