@@ -1,0 +1,151 @@
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/core@19 @angular/cli@19
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 19.2.22 to perform the update.
+⠋ Installing packages...(node:6552) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+                  Package "primeng" has an incompatible peer dependency to "zone.js" (requires "~0.14.0", would install "0.15.1").
+✖ Migration failed: Incompatible peer dependencies found.
+Peer dependency warnings when installing dependencies means that those dependencies might not work correctly together.
+You can use the '--force' option to ignore incompatible peer dependencies and instead address these warnings later.
+  See "C:\Users\conan\AppData\Local\Temp\ng-vY59oW\angular-errors.log" for further details.
+
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/core@20 @angular/cli@20
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 20.3.19 to perform the update.
+⠋ Installing packages...(node:18520) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+Updating multiple major versions of '@angular/core' at once is not supported. Please migrate each major version individually.
+Run 'ng update @angular/core@19' in your workspace directory to update to latest '19.x' version of '@angular/core'.
+
+For more information about the update process, see https://update.angular.dev/?v=18.0-19.0
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/core@21 @angular/cli@21
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 21.2.1 to perform the update.
+⠋ Installing packages...(node:13728) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+Updating multiple major versions of '@angular/core' at once is not supported. Please migrate each major version individually.
+Run 'ng update @angular/core@19' in your workspace directory to update to latest '19.x' version of '@angular/core'.
+
+For more information about the update process, see https://update.angular.dev/?v=18.0-19.0
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/material@19
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 19.2.22 to perform the update.
+⠋ Installing packages...(node:6516) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+                  Package "@angular-devkit/build-angular" has an incompatible peer dependency to "@angular/compiler-cli" (requires "^18.0.0" (extended), would install "20.3.17").
+                  Package "@angular-devkit/build-angular" has an incompatible peer dependency to "typescript" (requires ">=5.4 <5.5", would install "5.9.3").
+                  Package "primeng" has an incompatible peer dependency to "@angular/common" (requires "^17.0.0 || ^18.0.0" (extended), would install "20.3.17").
+                  Package "primeng" has an incompatible peer dependency to "@angular/core" (requires "^17.0.0 || ^18.0.0" (extended), would install "20.3.17").
+                  Package "primeng" has an incompatible peer dependency to "@angular/forms" (requires "^17.0.0 || ^18.0.0" (extended), would install "20.3.17").
+                  Package "primeng" has an incompatible peer dependency to "zone.js" (requires "~0.14.0", would install "0.15.1").
+✖ Migration failed: Incompatible peer dependencies found.
+Peer dependency warnings when installing dependencies means that those dependencies might not work correctly together.
+You can use the '--force' option to ignore incompatible peer dependencies and instead address these warnings later.
+  See "C:\Users\conan\AppData\Local\Temp\ng-pyF94h\angular-errors.log" for further details.
+
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/material@20
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 20.3.19 to perform the update.
+⠋ Installing packages...(node:10828) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+Updating multiple major versions of '@angular/material' at once is not supported. Please migrate each major version individually.
+Run 'ng update @angular/material@19' in your workspace directory to update to latest '19.x' version of '@angular/material'.
+
+For more information about the update process, see https://update.angular.dev/?v=18.0-19.0
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng update @angular/material@21
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 21.2.1 to perform the update.
+⠋ Installing packages...(node:20544) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages successfully installed.
+Using package manager: npm
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+Updating multiple major versions of '@angular/material' at once is not supported. Please migrate each major version individually.
+Run 'ng update @angular/material@19' in your workspace directory to update to latest '19.x' version of '@angular/material'.
+
+For more information about the update process, see https://update.angular.dev/?v=18.0-19.0
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npm.cmd install
+
+up to date, audited 1084 packages in 5s
+
+134 packages are looking for funding
+  run `npm fund` for details
+
+70 vulnerabilities (10 low, 19 moderate, 41 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>npx.cmd ng build
+
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   No
+Global setting: not set
+Local setting: disabled
+Effective status: disabled
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-FV3T4EVQ.js      | main          | 251.18 kB |                53.09 kB
+chunk-CVNTJLS4.js     | -             | 228.79 kB |                63.02 kB
+styles-2QDTNLL2.css   | styles        |  65.77 kB |                 6.79 kB
+polyfills-A7MJM4D4.js | polyfills     |  34.13 kB |                11.06 kB
+
+                      | Initial total | 579.86 kB |               133.96 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-4PXKDDFX.js     | browser       | 864 bytes |               864 bytes
+
+Output location: C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI\dist\book-shop-ui
+
+Application bundle generation complete. [9.128 seconds]
+
+▲ [WARNING] bundle initial exceeded maximum budget. Budget 512.00 kB was not met by 67.86 kB with a total of 579.86 kB.
+
+
+▲ [WARNING] src/app/components/pages/card-page/card-page.component.scss exceeded maximum budget. Budget 2.05 kB was not met by 337 bytes with a total of 2.38 kB.
+
+
+
+C:\Users\conan\OneDrive\Desktop\Tamplates\BookShop-template-UI>
