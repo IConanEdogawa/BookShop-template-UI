@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Angular / frontend artifacts
+dist/
+.angular/cache/
+log_es_terminal.txt
