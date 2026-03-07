@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-card-page-footer',
-  templateUrl: './card-page-footer.component.html',
-  styleUrl: './card-page-footer.component.scss'
+    selector: 'app-card-page-footer',
+    templateUrl: './card-page-footer.component.html',
+    styleUrl: './card-page-footer.component.scss',
+    standalone: false
 })
 export class CardPageFooterComponent {
   books: any[] = [

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-popular-page',
-  templateUrl: './popular-page.component.html',
-  styleUrl: './popular-page.component.scss'
+    selector: 'app-popular-page',
+    templateUrl: './popular-page.component.html',
+    styleUrl: './popular-page.component.scss',
+    standalone: false
 })
 export class PopularPageComponent implements OnInit {
   booksMonth = [

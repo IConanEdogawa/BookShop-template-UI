@@ -28,9 +28,10 @@ interface Book {
 }
 
 @Component({
-  selector: 'app-card-page',
-  templateUrl: './card-page.component.html',
-  styleUrl: './card-page.component.scss'
+    selector: 'app-card-page',
+    templateUrl: './card-page.component.html',
+    styleUrl: './card-page.component.scss',
+    standalone: false
 })
 export class CardPageComponent {
   user1 = {

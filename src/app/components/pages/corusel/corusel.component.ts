@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-corusel',
-  templateUrl: './corusel.component.html',
-  styleUrl: './corusel.component.scss'
+    selector: 'app-corusel',
+    templateUrl: './corusel.component.html',
+    styleUrl: './corusel.component.scss',
+    standalone: false
 })
 export class CoruselComponent implements OnInit {
   items = [
