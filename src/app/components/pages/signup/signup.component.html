@@ -1,20 +1,45 @@
-<div class="auth-container">
-    <h2>Sign Up</h2>
-    <form (ngSubmit)="onSignup()">
-      <div>
-        <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" [(ngModel)]="fullname" name="fullname" required>
-      </div>
-      <div>
+<section class="login-page">
+  <div class="login-page__backdrop"></div>
+
+  <div class="login-page__layout">
+    <aside class="login-page__promo">
+      <p class="eyebrow">Book Shop</p>
+      <h1>Create Account</h1>
+      <p class="subtitle">Join the community and save favorites, reading lists, and recommendations in one place.</p>
+    </aside>
+
+    <div class="auth-card">
+      <h2>Sign up</h2>
+      <p class="auth-card__hint">Create your account in a few seconds.</p>
+
+      <form class="auth-form" (ngSubmit)="onSignup()">
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" [(ngModel)]="fullname" name="fullname" autocomplete="name" required />
+
         <label for="email">Email</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" required>
-      </div>
-      <div>
+        <input type="email" id="email" [(ngModel)]="email" name="email" autocomplete="email" required />
+
         <label for="password">Password</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        <div class="password-wrap">
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            autocomplete="new-password"
+            required
+          />
+          <button type="button" class="toggle-btn" (click)="togglePassword()">
+            {{ showPassword ? 'Hide' : 'Show' }}
+          </button>
+        </div>
+
+        <button class="submit-btn" type="submit">Create account</button>
+      </form>
+
+      <div class="auth-card__links">
+        <p>Already have an account? <a routerLink="/login">Log in</a></p>
       </div>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account? <a routerLink="/login">Login</a></p>
+    </div>
   </div>
-  
+</section>

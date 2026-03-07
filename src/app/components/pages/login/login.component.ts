@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -8,12 +7,15 @@ import { Router } from '@angular/router';
     standalone: false
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
+  email = '';
+  password = '';
+  showPassword = false;
 
-  // constructor(private router: Router) {}
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
 
-  onLogin() {
+  onLogin(): void {
     // Implement your login logic here
     console.log('Login:', this.email, this.password);
     // Navigate to another page on successful login

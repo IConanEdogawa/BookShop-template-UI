@@ -1,14 +1,19 @@
 <div class="popular-container">
-  <h2 class="popular-title">Сегодня самые популярные</h2>
+  <div class="popular-head">
+    <div>
+      <p class="eyebrow">Trending Shelf</p>
+      <h2 class="popular-title">Popular today</h2>
+    </div>
+    <a [routerLink]="'/popular'" class="view-all">View all</a>
+  </div>
   <div class="popular-cards">
-    @for (book of popularBooks; track book) {
+    @for (book of popularBooks; track book.id) {
       <app-card
+        [id]="book.id"
         [image]="book.image"
         [title]="book.title"
         [author]="book.author"
       ></app-card>
     }
   </div>
-  <a [routerLink]="'/most-popular'" class="view-all">Просмотреть все</a>
-
 </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Book } from '../../../models/book.model';
+import { BookService } from '../../../services/book.service';
 
 @Component({
     selector: 'app-popular-page',
@@ -7,139 +10,21 @@ import { Component, OnInit } from '@angular/core';
     standalone: false
 })
 export class PopularPageComponent implements OnInit {
-  booksMonth = [
-    {
-      image: 'assets/images/image1.png',
-      title: 'Название книги 1',
-      author: 'Автор 1'
-    },
-    {
-      image: 'assets/images/image2.png',
-      title: 'Название книги 2',
-      author: 'Автор 2'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    // Добавьте другие книги по аналогии
-  ];
+  booksMonth: Book[] = [];
+  booksWeek: Book[] = [];
+  booksDay: Book[] = [];
 
-  booksWeek = [
-    {
-      image: 'assets/images/image1.png',
-      title: 'Название книги 1',
-      author: 'Автор 1'
-    },
-    {
-      image: 'assets/images/image2.png',
-      title: 'Название книги 2',
-      author: 'Автор 2'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    // Добавьте другие книги по аналогии
-  ];
+  constructor(
+    private readonly bookService: BookService,
+    private readonly route: ActivatedRoute
+  ) {}
 
-  booksDay = [
-    {
-      image: 'assets/images/image1.png',
-      title: 'Название книги 1',
-      author: 'Автор 1'
-    },
-    {
-      image: 'assets/images/image2.png',
-      title: 'Название книги 2',
-      author: 'Автор 2'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    // Добавьте другие книги по аналогии
-  ];
-
-  constructor() { }
-
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.route.queryParamMap.subscribe((params) => {
+      const search = params.get('search') ?? '';
+      this.booksMonth = this.bookService.getPopularBooks('month', search);
+      this.booksWeek = this.bookService.getPopularBooks('week', search);
+      this.booksDay = this.bookService.getPopularBooks('day', search);
+    });
+  }
 }

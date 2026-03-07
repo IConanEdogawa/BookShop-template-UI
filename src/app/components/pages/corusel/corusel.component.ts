@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-corusel',
@@ -24,9 +25,12 @@ export class CoruselComponent implements OnInit {
       title: 'Book Title 3'
     }
   ];
-  categories = ['All', 'Category 1', 'Category 2', 'Category 3', 'Category 4'];
+  categories = ['All', 'Fantasy', 'Science Fiction', 'Self Development', 'Technology'];
   currentIndex: number = 0;
+  selectedCategory = 'All';
   interval: any;
+
+  constructor(private readonly router: Router) {}
 
   ngOnInit(): void {
     this.startCarousel();
@@ -42,5 +46,11 @@ export class CoruselComponent implements OnInit {
     if (this.interval) {
       clearInterval(this.interval);
     }
+  }
+
+  onCategorySelect(category: string): void {
+    this.selectedCategory = category;
+    const query = category === 'All' ? null : category;
+    this.router.navigate(['/popular'], { queryParams: { search: query } });
   }
 }

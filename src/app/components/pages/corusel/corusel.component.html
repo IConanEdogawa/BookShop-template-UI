@@ -1,22 +1,33 @@
-<div class="carousel-container">
-  @for (item of items; track item; let i = $index) {
-    <div class="carousel-slide" [class.active]="i === currentIndex">
-      <div class="carousel-image-container">
-        <img [src]="item.image" alt="Carousel Image" class="carousel-image">
-      </div>
-      <div class="carousel-poster-title-container">
-        <div class="carousel-title">
-          <h2>{{ item.title }}</h2>
+<section class="carousel-shell">
+  <div class="carousel-container">
+    @for (item of items; track item; let i = $index) {
+      <div class="carousel-slide" [class.active]="i === currentIndex">
+        <div class="carousel-image-container">
+          <img [src]="item.image" alt="Carousel Image" class="carousel-image">
         </div>
-        <div class="carousel-poster-container">
-          <img [src]="item.poster" alt="Book Poster" class="carousel-poster">
+        <div class="carousel-poster-title-container">
+          <div class="carousel-title">
+            <p class="kicker">Editor pick</p>
+            <h2>{{ item.title }}</h2>
+          </div>
+          <div class="carousel-poster-container">
+            <img [src]="item.poster" alt="Book Poster" class="carousel-poster">
+          </div>
         </div>
       </div>
-    </div>
-  }
-</div>
-<div class="carousel-categories">
-  @for (category of categories; track category) {
-    <div class="category">{{ category }}</div>
-  }
-</div>
+    }
+  </div>
+
+  <div class="carousel-categories">
+    @for (category of categories; track category) {
+      <button
+        type="button"
+        class="category"
+        [class.active]="selectedCategory === category"
+        (click)="onCategorySelect(category)"
+      >
+        {{ category }}
+      </button>
+    }
+  </div>
+</section>

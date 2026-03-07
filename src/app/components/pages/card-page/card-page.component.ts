@@ -1,31 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-
-
-interface User {
-  id: number;
-  name: string;
-}
-
-interface Book {
-  image: any;
-  title: string;
-  originalTitle: string;
-  country: string;
-  year: string;
-  status: string;
-  tags: string[];
-  rate: string;
-  view: string;
-  likes: string;
-  saved: string;
-  description: string;
-  publisher?: string;
-  author?: string;
-  artist?: string;
-  translator?: string;
-  users: User[];
-}
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Book } from '../../../models/book.model';
+import { BookService } from '../../../services/book.service';
 
 @Component({
     selector: 'app-card-page',
@@ -33,38 +9,32 @@ interface Book {
     styleUrl: './card-page.component.scss',
     standalone: false
 })
-export class CardPageComponent {
-  user1 = {
-    id: 1,
-    name: 'John Doe'
-}
-user2 = {
-    id: 2,
-    name: 'Enteny Stark'
-}
-
-  book: Book = {
-      image: '/assets/images/image1.png',
-      title: 'Harry Potter and the Philosopher\'s Stone',
-      originalTitle: 'Harry Potter and the Philosopher\'s Stone',
-      country: 'EU',
-      year: '1997',
-      status: 'completed',
-      tags: ['magic', 'fantasy'],
-      rate: '9.5',
-      view: '10.6k',
-      likes: '125k',
-      publisher: 'Penguin Random House', 
-      author: 'J.K. Rowling', 
-      artist: 'J.K. Rowling',
-      translator: 'J.K. Rowling',
-      saved: '35k',
-      description: 'This is the description of the book.',
-      users: [this.user1, this.user2]
-  };
-
+export class CardPageComponent implements OnInit {
+  book?: Book;
   selectedStatus = 'Choose a status';
   statuses = ['Choose a status', 'Started', 'Stopped', 'Liked'];
 
-  // route ga ID berish va API ga ulash kerak.
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly bookService: BookService
+  ) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      const id = Number(params.get('id'));
+      if (!id) {
+        this.router.navigate(['/home']);
+        return;
+      }
+
+      const book = this.bookService.getBookById(id);
+      if (!book) {
+        this.router.navigate(['/home']);
+        return;
+      }
+
+      this.book = book;
+    });
+  }
 }

@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { Book } from '../../models/book.model';
+import { BookService } from '../../services/book.service';
 
 @Component({
     selector: 'app-home',
@@ -7,48 +9,9 @@ import { Component, Input } from '@angular/core';
     standalone: false
 })
 export class HomeComponent {
-  // @Input() books: any[] = [];
-  @Input() books: any[] = [
-    {
-      image: 'assets/images/image1.png',
-      title: 'Название книги 1',
-      author: 'Автор 1'
-    },
-    {
-      image: 'assets/images/image2.png',
-      title: 'Название книги 2',
-      author: 'Автор 2'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    // Добавьте другие книги по аналогии
-  ];
+  books: Book[] = [];
+
+  constructor(private readonly bookService: BookService) {
+    this.books = this.bookService.getFeaturedBooks();
+  }
 }

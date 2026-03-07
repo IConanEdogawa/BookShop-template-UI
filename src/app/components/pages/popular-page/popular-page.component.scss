@@ -1,21 +1,57 @@
 .popular-books {
-    text-align: center;
-    padding: 20px;
-  
-    .title {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #333;
-    }
-  
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-  }
-  
-  .mat-container  {
-    color: rgb(156, 80, 227);
-  }
+  width: min(100% - 2rem, var(--container));
+  margin: 0 auto;
+  padding: 28px 0 34px;
+}
+
+.page-head {
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.mat-container {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  padding-top: 14px;
+}
+
+:host ::ng-deep .mat-mdc-tab-labels {
+  background: #f0e8dc;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+:host ::ng-deep .mdc-tab {
+  min-width: 100px;
+}
+
+:host ::ng-deep .mdc-tab-indicator__content--underline {
+  border-color: var(--accent) !important;
+}

@@ -1,4 +1,12 @@
 <app-navbar></app-navbar>
-<app-corusel></app-corusel>
-<app-popular [popularBooks]="books"></app-popular>
+<main class="home-shell">
+  <section class="home-hero">
+    <p class="eyebrow">BookShop Collection</p>
+    <h1>Find your next favorite read</h1>
+    <p>Curated picks, popular titles, and book details in a cleaner modern experience.</p>
+  </section>
+
+  <app-corusel></app-corusel>
+  <app-popular [popularBooks]="books"></app-popular>
+</main>
 <app-footer></app-footer>

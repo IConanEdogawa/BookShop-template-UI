@@ -1,17 +1,25 @@
-<!-- navbar.component.html -->
 <nav class="navbar">
-    <div class="logo-container">
+  <div class="navbar__inner">
+    <div class="logo-container" [routerLink]="['/home']">
       <img src="../../../../assets/images/shopping-logo-svgrepo-com.svg" alt="BookShop Logo" class="logo" />
       <h1>BookShop</h1>
     </div>
     <ul class="nav-links">
-      <li class="nav-item"><strong><a routerLink="/" routerLinkActive="active">Home</a></strong></li>
+      <li class="nav-item"><strong><a routerLink="/home" routerLinkActive="active">Home</a></strong></li>
       <li class="nav-item"><strong><a routerLink="/popular" routerLinkActive="active">Popular</a></strong></li>
-      <li class="nav-item"><strong><a routerLink="/new-gen" routerLinkActive="active">New-gen</a></strong></li>
-      <li class="nav-item"><strong><a routerLink="/most-view" routerLinkActive="active">Most View</a></strong></li>
+      <li class="nav-item"><strong><a routerLink="/user-profile" routerLinkActive="active">Profile</a></strong></li>
+      <li class="nav-item"><strong><a routerLink="/login" routerLinkActive="active">Login</a></strong></li>
     </ul>
     <div class="search-container">
-      <input type="text" placeholder="Search books..." class="search-input" />
+      <input
+        type="text"
+        placeholder="Search books..."
+        class="search-input"
+        [(ngModel)]="searchTerm"
+        (keyup.enter)="onSearch()"
+      />
+      <button type="button" class="search-btn" (click)="onSearch()">Search</button>
     </div>
-  </nav>
+  </div>
+</nav>
   

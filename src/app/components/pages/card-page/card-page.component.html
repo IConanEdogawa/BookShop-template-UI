@@ -1,82 +1,81 @@
 <app-navbar></app-navbar>
 
-<section class="container">
-  <div class="right-aside">
-    <img [src]="book.image" alt="Book Image">
-    <button>Read</button>
-    <select name="type" [(ngModel)]="selectedStatus">
-      @for (status of statuses; track status) {
-        <option [value]="status">{{ status }}</option>
-      }
-    </select>
-  </div>
+@if (book; as currentBook) {
+  <section class="container">
+    <div class="right-aside">
+      <img [src]="currentBook.image" alt="Book Image">
+      <button>Add to library</button>
+      <select name="type" [(ngModel)]="selectedStatus">
+        @for (status of statuses; track status) {
+          <option [value]="status">{{ status }}</option>
+        }
+      </select>
+    </div>
 
-  <div class="left-aside">
-    <h6>{{ book.country }} {{ book.year }} {{ book.status }}</h6>
-    <h1>{{ book.title }}</h1>
-    <h3>{{ book.originalTitle || '' }}</h3>
-    @if (book?.tags?.length) {
-      <div id="book-tags">
-        @for (tag of book.tags; track tag) {
-          <span>{{ tag }}</span>
-        }
-      </div>
-    }
-    <div id="book-rating">
-      @if (book.rate) {
-        <span><i class="icon-rate"></i> {{ book.rate }}</span>
-      }
-      @if (book.view) {
-        <span><i class="icon-view"></i> {{ book.view }}</span>
-      }
-      @if (book.likes) {
-        <span><i class="icon-likes"></i> {{ book.likes }}</span>
-      }
-      @if (book.saved) {
-        <span><i class="icon-saved"></i> {{ book.saved }}</span>
-      }
-    </div>
-    <p>{{ book.description }}</p>
-    <div id="book-authors">
-      <div>
-        @if (book.publisher) {
-          <p>Publisher </p>
-        }
-        @if (book.author) {
-          <p>Author </p>
-        }
-        @if (book.artist) {
-          <p>Artist </p>
-        }
-        @if (book.translator) {
-          <p>Translator </p>
-        }
-      </div>
-      <div>
-        @if (book.publisher) {
-          <span>{{ book.publisher }}</span>
-        }
-        @if (book.author) {
-          <span>{{ book.author }}</span>
-        }
-        @if (book.artist) {
-          <span>{{ book.artist }}</span>
-        }
-        @if (book.translator) {
-          <span>{{ book.translator }}</span>
-        }
-      </div>
-    </div>
-    <div id="book-users">
-      @for (user of book?.users; track user) {
-        <p>
-          <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
-        </p>
-      }
-    </div>
-  </div>
-</section>
+    <div class="left-aside">
+      <h6>{{ currentBook.country }} {{ currentBook.year }} {{ currentBook.status }}</h6>
+      <h1>{{ currentBook.title }}</h1>
+      <h3>{{ currentBook.originalTitle }}</h3>
 
-<app-card-page-footer></app-card-page-footer>
+      @if (currentBook.tags.length) {
+        <div id="book-tags">
+          @for (tag of currentBook.tags; track tag) {
+            <span>{{ tag }}</span>
+          }
+        </div>
+      }
+
+      <div id="book-rating">
+        <span><i class="icon-rate"></i> {{ currentBook.rate }}</span>
+        <span><i class="icon-view"></i> {{ currentBook.view }}</span>
+        <span><i class="icon-likes"></i> {{ currentBook.likes }}</span>
+        <span><i class="icon-saved"></i> {{ currentBook.saved }}</span>
+      </div>
+
+      <p>{{ currentBook.description }}</p>
+
+      <div id="book-authors">
+        <div>
+          @if (currentBook.publisher) {
+            <p>Publisher</p>
+          }
+          @if (currentBook.author) {
+            <p>Author</p>
+          }
+          @if (currentBook.artist) {
+            <p>Artist</p>
+          }
+          @if (currentBook.translator) {
+            <p>Translator</p>
+          }
+        </div>
+        <div>
+          @if (currentBook.publisher) {
+            <span>{{ currentBook.publisher }}</span>
+          }
+          @if (currentBook.author) {
+            <span>{{ currentBook.author }}</span>
+          }
+          @if (currentBook.artist) {
+            <span>{{ currentBook.artist }}</span>
+          }
+          @if (currentBook.translator) {
+            <span>{{ currentBook.translator }}</span>
+          }
+        </div>
+      </div>
+
+      <div id="book-users">
+        @for (user of currentBook.users; track user.id) {
+          <p>
+            <a [routerLink]="['/user-profile']">{{ user.name }}</a>
+          </p>
+        }
+      </div>
+    </div>
+  </section>
+
+  <app-card-page-footer [currentBookId]="currentBook.id"></app-card-page-footer>
+}
 
 <app-footer></app-footer>

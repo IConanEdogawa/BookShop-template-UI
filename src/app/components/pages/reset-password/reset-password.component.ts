@@ -8,13 +8,23 @@ import { Router } from '@angular/router';
     standalone: false
 })
 export class ResetPasswordComponent {
-  code: string = '';
-  password: string = '';
-  confirmPassword: string = '';
+  code = '';
+  password = '';
+  confirmPassword = '';
+  showPassword = false;
+  showConfirmPassword = false;
 
   constructor(private router: Router) {}
 
-  onResetPassword() {
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
+
+  toggleConfirmPassword(): void {
+    this.showConfirmPassword = !this.showConfirmPassword;
+  }
+
+  onResetPassword(): void {
     // Implement your reset password logic here
     if (this.password === this.confirmPassword) {
       console.log('Reset Password:', this.code, this.password);

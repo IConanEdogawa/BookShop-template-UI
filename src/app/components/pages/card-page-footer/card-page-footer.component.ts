@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Book } from '../../../models/book.model';
+import { BookService } from '../../../services/book.service';
 
 @Component({
     selector: 'app-card-page-footer',
@@ -6,48 +8,15 @@ import { Component } from '@angular/core';
     styleUrl: './card-page-footer.component.scss',
     standalone: false
 })
-export class CardPageFooterComponent {
-  books: any[] = [
-    {
-      image: 'assets/images/image1.png',
-      title: 'Название книги 1',
-      author: 'Автор 1'
-    },
-    {
-      image: 'assets/images/image2.png',
-      title: 'Название книги 2',
-      author: 'Автор 2'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    {
-      image: 'assets/images/image3.png',
-      title: 'Название книги 3',
-      author: 'Автор 3'
-    },
-    // Добавьте другие книги по аналогии
-  ];
+export class CardPageFooterComponent implements OnChanges {
+  @Input() currentBookId = 0;
+  books: Book[] = [];
+
+  constructor(private readonly bookService: BookService) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['currentBookId']) {
+      this.books = this.bookService.getRelatedBooks(this.currentBookId);
+    }
+  }
 }

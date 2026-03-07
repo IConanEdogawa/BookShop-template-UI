@@ -1,0 +1,30 @@
+.panel-card {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 14px;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+  }
+}
+
+.comment {
+  border-top: 1px dashed #e4dbcf;
+  padding-top: 10px;
+  margin-top: 10px;
+
+  p {
+    margin: 0;
+    color: #4a586c;
+    line-height: 1.6;
+  }
+}
+
+.book {
+  margin-bottom: 4px !important;
+  font-weight: 700;
+  color: var(--ink) !important;
+}

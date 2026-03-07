@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
     standalone: false
 })
 export class CardComponent {
+  @Input() id!: number;
   @Input() image!: string;
   @Input() title!: string;
   @Input() author!: string;

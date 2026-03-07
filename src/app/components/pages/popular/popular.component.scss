@@ -1,34 +1,54 @@
 .popular-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.popular-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.popular-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--ink);
+}
+
+.popular-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.view-all {
+  text-decoration: none;
+  color: var(--accent-strong);
+  font-weight: 700;
+  font-size: 0.93rem;
+}
+
+@media (max-width: 720px) {
+  .popular-container {
+    padding: 16px;
   }
-  
-  .popular-title {
-    font-size: 24px;
-    color: #4a148c;
-    margin-bottom: 20px;
-    margin-left: 20px;
+
+  .popular-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
-  
-  .popular-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .view-all {
-    display: block;
-    text-align: center;
-    color: #4a148c;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-  .view-all:hover {
-    text-decoration: underline;
-  }
-  
+}

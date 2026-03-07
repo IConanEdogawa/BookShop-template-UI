@@ -1,90 +1,78 @@
-.container {
-  // display: flex;
-  height: auto;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.419);
-  //   justify-content: space-between;
-  margin-top: 350px;
-  margin-bottom: 15px;
-}
-
-.second-container {
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    bottom: 15px;
-    left: 20px;
-    // margin-left: 10px;
-    // margin-bottom: auto;
-  }
-  p {
-    position: relative;
-    bottom: 45px;
-    left: 20px;
-    // margin-right: 20px;
-    // margin-bottom: 10px;
-  }
-  
-}
-
 .background {
-  position: absolute;
-  top: 80px;
-  width: 100%;
-  height: 400px;
-  background-image: url("../../../../assets/images/avatar.jpg");
+  height: 220px;
+  margin: 8px auto 0;
+  width: min(100% - 2rem, var(--container));
+  border-radius: 18px;
+  background-image:
+    linear-gradient(to top, rgba(16, 26, 37, 0.45), rgba(16, 26, 37, 0.15)),
+    url('../../../../assets/images/avatar.jpg');
   background-size: cover;
-  background-position: top;
-  filter: blur(4px);
-  z-index: -1;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.781);
+  background-position: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin: -50px auto 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
 }
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 20px;
+  border: 3px solid #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.second-container {
+  flex: 1;
+
+  h1 {
+    margin: 0;
+    font-size: 1.45rem;
+  }
+
+  p {
+    margin: 4px 0 0;
+    color: var(--muted);
+  }
 }
 
 .edit-profile {
-    margin-left: 1120px;
-    padding: 5px;
-    background-color: #ffffff;
-    border: 1px solid #c6c6c6;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  padding: 0 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+:host ::ng-deep .mat-mdc-tab-labels {
+  background: #f0e8dc;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+:host ::ng-deep .mdc-tab-indicator__content--underline {
+  border-color: var(--accent) !important;
+}
+
+@media (max-width: 680px) {
+  .profile-head {
+    flex-wrap: wrap;
   }
-  
-  .edit-profile img {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-    margin-top: 5px;
-  }
-  
-  .edit-profile:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-
-
-
-  
-//-----------------------------------------
-
-
+}

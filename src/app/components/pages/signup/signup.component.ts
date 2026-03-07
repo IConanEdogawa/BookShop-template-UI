@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-signup',
@@ -8,13 +7,16 @@ import { Router } from '@angular/router';
     standalone: false
 })
 export class SignupComponent {
-  fullname: string = '';
-  email: string = '';
-  password: string = '';
+  fullname = '';
+  email = '';
+  password = '';
+  showPassword = false;
 
-  // constructor(private router: Router) {}
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
 
-  onSignup() {
+  onSignup(): void {
     console.log('Signup:', this.fullname, this.email, this.password);
   }
 }

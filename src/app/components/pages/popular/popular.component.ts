@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Book } from '../../../models/book.model';
 
 @Component({
     selector: 'app-popular',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
     standalone: false
 })
 export class PopularComponent {
-  @Input() popularBooks: any[] = [];
+  @Input() popularBooks: Book[] = [];
 }

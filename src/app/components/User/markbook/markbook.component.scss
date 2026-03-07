@@ -1,0 +1,22 @@
+.panel-card {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 14px;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #49566a;
+  }
+
+  li + li {
+    margin-top: 6px;
+  }
+}

@@ -1,0 +1,30 @@
+.home-shell {
+  width: min(100% - 2rem, var(--container));
+  margin: 0 auto;
+  padding: 26px 0 34px;
+}
+
+.home-hero {
+  margin-bottom: 18px;
+
+  h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  p {
+    margin: 0;
+    max-width: 650px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  font-weight: 700;
+}

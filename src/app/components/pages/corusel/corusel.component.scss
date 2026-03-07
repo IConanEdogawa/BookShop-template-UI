@@ -1,111 +1,117 @@
+.carousel-shell {
+  margin-bottom: 28px;
+}
+
 .carousel-container {
-    position: relative;
-    width: 85%;
-    height: 400px;
-    overflow: hidden;
-    align-items: center;
-    margin-left: 7%;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: #f5f5f5;
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #ece6dc;
+  box-shadow: var(--shadow-soft);
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px) saturate(80%);
+  transform: scale(1.03);
+}
+
+.carousel-poster-title-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: clamp(18px, 4vw, 42px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(24, 28, 33, 0.58), rgba(24, 28, 33, 0.15));
+}
+
+.carousel-title {
+  color: #f4f2ed;
+  max-width: 560px;
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
   }
-  
-  .carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  
-  .carousel-slide.active {
-    opacity: 1;
-  }
-  
-  .carousel-image-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(5px);
-    border-radius: 5px;
-  }
-  
-  .carousel-poster-title-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .carousel-poster-container {
-    position: relative;
-    width: 350px;
-    height: 550px;
-    margin-right: 10%;
-    transform: rotate(12deg);
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-  }
-  
-  .carousel-poster {
-    width: 100%;  /* Изображение немного меньше контейнера */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .carousel-title {
-    color: #4a148c; 
-    font-size: 24px;
-  }
-  
-  .carousel-categories {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    overflow-x: auto;
-    scrollbar-width: none; /* скрыть полосу прокрутки Firefox */
-    width: 85%; /* Ширина, соответствующая ширине большого контейнера */
-    margin-left: 7%; /* Синхронизировать отступ слева */
-    background-color: #4a148c; /* Фиолетовый фон */
-    border-radius: 5px; /* Радиус границы */
-  }
-  
-  .carousel-categories::-webkit-scrollbar {
-    display: none; /* скрыть полосу прокрутки Chrome, Safari */
-  }
-  
-  .category {
-    color: white; /* Белый текст */
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
-    white-space: nowrap;
-    background: none; /* Убрать фон */
-  }
-  
-  .category:hover {
-    color: #a767f6; /* Фиолетовый текст при наведении */
-    cursor: pointer;
-    // background: white; /* Белый фон при наведении */
+}
+
+.kicker {
+  margin: 0 0 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e4d5bc;
+}
+
+.carousel-poster-container {
+  width: clamp(180px, 26vw, 290px);
+  height: clamp(250px, 33vw, 390px);
+  border-radius: 14px;
+  transform: rotate(8deg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.carousel-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-categories {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category:hover,
+.category.active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .carousel-container {
+    min-height: 350px;
   }
 
-  
-  
+  .carousel-poster-container {
+    display: none;
+  }
+}

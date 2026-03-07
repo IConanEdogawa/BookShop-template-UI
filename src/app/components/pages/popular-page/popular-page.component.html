@@ -1,13 +1,18 @@
 <app-navbar></app-navbar>
 
-<div class="popular-books">
-  <h1 class="title">Popular Books</h1>
+<main class="popular-books">
+  <header class="page-head">
+    <p class="eyebrow">Book Rankings</p>
+    <h1 class="title">Popular Books</h1>
+    <p class="subtitle">Browse top books by month, week, and day.</p>
+  </header>
 
   <mat-tab-group class="mat-container">
     <mat-tab label="In Month">
       <div class="cards-container">
-        @for (book of booksMonth; track book) {
+        @for (book of booksMonth; track book.id) {
           <app-card
+            [id]="book.id"
             [image]="book.image"
             [title]="book.title"
             [author]="book.author">
@@ -17,8 +22,9 @@
     </mat-tab>
     <mat-tab label="In Week">
       <div class="cards-container">
-        @for (book of booksWeek; track book) {
+        @for (book of booksWeek; track book.id) {
           <app-card
+            [id]="book.id"
             [image]="book.image"
             [title]="book.title"
             [author]="book.author">
@@ -28,8 +34,9 @@
     </mat-tab>
     <mat-tab label="In Day">
       <div class="cards-container">
-        @for (book of booksDay; track book) {
+        @for (book of booksDay; track book.id) {
           <app-card
+            [id]="book.id"
             [image]="book.image"
             [title]="book.title"
             [author]="book.author">
@@ -38,6 +45,6 @@
       </div>
     </mat-tab>
   </mat-tab-group>
-</div>
+</main>
 
 <app-footer></app-footer>

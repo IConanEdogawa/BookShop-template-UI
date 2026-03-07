@@ -10,17 +10,18 @@ import { ForgotPasswordComponent } from './components/pages/forgot-password/forg
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
-  { path: 'most-popular', component: PopularPageComponent },
-  { path: 'detailes', component: CardPageComponent },
+  { path: 'most-popular', redirectTo: '/popular', pathMatch: 'full' },
+  { path: 'detailes', redirectTo: '/books/1', pathMatch: 'full' },
+  { path: 'books/:id', component: CardPageComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'popular', component: PopularPageComponent },
   { path: 'home', component: HomeComponent },
-  { path: '**', component: HomeComponent }
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
