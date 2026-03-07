@@ -1,48 +1,80 @@
 <app-navbar></app-navbar>
 
 <section class="container">
-    <div class="right-aside">
-        <img [src]="book.image" alt="Book Image">
-        <button>Read</button>
-        <select name="type" [(ngModel)]="selectedStatus">
-            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
-        </select>
-    </div>
+  <div class="right-aside">
+    <img [src]="book.image" alt="Book Image">
+    <button>Read</button>
+    <select name="type" [(ngModel)]="selectedStatus">
+      @for (status of statuses; track status) {
+        <option [value]="status">{{ status }}</option>
+      }
+    </select>
+  </div>
 
-    <div class="left-aside">
-        <h6>{{ book.country }} {{ book.year }} {{ book.status }}</h6>
-        <h1>{{ book.title }}</h1>
-        <h3>{{ book.originalTitle || '' }}</h3>
-        <div *ngIf="book?.tags?.length" id="book-tags">
-            <span *ngFor="let tag of book.tags">{{ tag }}</span>
-        </div>
-        <div id="book-rating">
-            <span *ngIf="book.rate"><i class="icon-rate"></i> {{ book.rate }}</span>
-            <span *ngIf="book.view"><i class="icon-view"></i> {{ book.view }}</span>
-            <span *ngIf="book.likes"><i class="icon-likes"></i> {{ book.likes }}</span>
-            <span *ngIf="book.saved"><i class="icon-saved"></i> {{ book.saved }}</span>
-        </div>
-        <p>{{ book.description }}</p>
-        <div id="book-authors">
-            <div>
-                <p *ngIf="book.publisher">Publisher </p>
-                <p *ngIf="book.author">Author </p>
-                <p *ngIf="book.artist">Artist </p>
-                <p *ngIf="book.translator">Translator </p>
-            </div>
-            <div>
-                <span *ngIf="book.publisher">{{ book.publisher }}</span>
-                <span *ngIf="book.author">{{ book.author }}</span>
-                <span *ngIf="book.artist">{{ book.artist }}</span>
-                <span *ngIf="book.translator">{{ book.translator }}</span>
-            </div>
-        </div>
-        <div id="book-users">
-            <p *ngFor="let user of book?.users">
-                <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
-            </p>
-        </div>
+  <div class="left-aside">
+    <h6>{{ book.country }} {{ book.year }} {{ book.status }}</h6>
+    <h1>{{ book.title }}</h1>
+    <h3>{{ book.originalTitle || '' }}</h3>
+    @if (book?.tags?.length) {
+      <div id="book-tags">
+        @for (tag of book.tags; track tag) {
+          <span>{{ tag }}</span>
+        }
+      </div>
+    }
+    <div id="book-rating">
+      @if (book.rate) {
+        <span><i class="icon-rate"></i> {{ book.rate }}</span>
+      }
+      @if (book.view) {
+        <span><i class="icon-view"></i> {{ book.view }}</span>
+      }
+      @if (book.likes) {
+        <span><i class="icon-likes"></i> {{ book.likes }}</span>
+      }
+      @if (book.saved) {
+        <span><i class="icon-saved"></i> {{ book.saved }}</span>
+      }
     </div>
+    <p>{{ book.description }}</p>
+    <div id="book-authors">
+      <div>
+        @if (book.publisher) {
+          <p>Publisher </p>
+        }
+        @if (book.author) {
+          <p>Author </p>
+        }
+        @if (book.artist) {
+          <p>Artist </p>
+        }
+        @if (book.translator) {
+          <p>Translator </p>
+        }
+      </div>
+      <div>
+        @if (book.publisher) {
+          <span>{{ book.publisher }}</span>
+        }
+        @if (book.author) {
+          <span>{{ book.author }}</span>
+        }
+        @if (book.artist) {
+          <span>{{ book.artist }}</span>
+        }
+        @if (book.translator) {
+          <span>{{ book.translator }}</span>
+        }
+      </div>
+    </div>
+    <div id="book-users">
+      @for (user of book?.users; track user) {
+        <p>
+          <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
+        </p>
+      }
+    </div>
+  </div>
 </section>
 
 <app-card-page-footer></app-card-page-footer>
